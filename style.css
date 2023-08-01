@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --Tomato: hsl(4, 100%, 67%);
+  --Pink: hsl(347, 100%, 66%);
+  --Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --Charcoal-Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+
+  --radius-400: 7px;
+  --radius-500: 15px;
+  --radius-600: 35px;
+
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 400;
+  background-color: var(--Charcoal-Grey);
+}
+
+img{
+  width: 100%;
+  max-width: 100%;
+}
+
+h1.title {
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 22px;
+  color: var(--Dark-Slate-Grey);
+  line-height: 1;
+}
+
+ul.icon-list {
+  list-style: none;
+  margin-top: 22px;
+}
+
+ul.icon-list li {
+  position: relative;
+  display: inline-flex;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+ul.icon-list li:last-child{
+  margin-bottom: 0;
+}
+
+ul.icon-list li::before {
+  content: "";
+  flex: 0 0 20px;
+  height: 20px;
+  background: url("./assets/images/icon-list.svg") no-repeat center / contain;
+  margin-right: 17px;
+}
+
+.join-us-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subscribe-container, 
+.succes-container {
+  background-color: white;
+}
+
+.subscribe-container {
+  max-width: 930px;
+  margin: 0 auto;
+}
+
+.subscribe-container .content-col {
+  padding: 45px 24px;
+}
+
+.email-form {
+  margin-top: 40px;
+}
+
+.email-form .input-wrap {
+  position: relative;
+}
+
+.email-form .input-wrap .error-message {
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--Tomato);
+  position: absolute;
+  right: 0;
+  top: -23px;
+}
+
+form label {
+  font-weight: 700;
+  font-size: 12px;
+  margin-bottom: 7px;
+  display: inline-block;
+  color: var(--Dark-Slate-Grey);
+}
+
+#email-input {
+  line-height: 55px;
+  border: 1px solid var(--Grey);
+  border-radius: var(--radius-400);
+  width: 100%;
+  padding: 0 24px;
+  font-size: inherit;
+  font-family: inherit;
+  color: var(--Charcoal-Grey);;
+  outline: none;
+}
+
+#email-input.invalid,
+#email-input.invalid:focus {
+  border-color: var(--Tomato);
+  background-color: hsl(4deg 100% 67% / 15%);
+  color: var(--Tomato);
+}
+
+#email-input:focus{
+  border-color: var(--Charcoal-Grey);
+}
+
+#email-input::placeholder{
+  color: var(--Grey);
+}
+
+.button-wrap{
+  position: relative;
+  margin-top: 25px;
+  border-radius: var(--radius-400);
+  overflow: hidden;
+  transition: box-shadow .4s;
+}
+
+.button-wrap::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(to right, var(--Pink), var(--Tomato));
+}
+
+.button-wrap input{
+  background-color: var(--Dark-Slate-Grey);
+  color: var(--White);
+  border: none;
+  line-height: 55px;
+  width: 100%;
+  font-size: 15px;
+  font-weight: 700;
+  transition: background-color .4s;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.button-wrap:hover{
+  box-shadow: 0px 10px 45px -10px var(--Tomato);
+}
+
+.button-wrap:hover input{
+  background-color: transparent;
+}
+
+.succes-container {
+  padding: 150px 24px 45px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 505px;
+}
+
+.succes-container img.icon {
+  max-width: 64px;
+  margin-bottom: 32px;
+}
+
+.succes-container .button-wrap {
+  margin-top: auto;
+}
+
+span#target-email {
+  font-weight: 700;
+  color: var(--Dark-Slate-Grey);
+}
+
+
+/*---------Breapoints---------*/
+
+@media screen and (min-width: 500px) {
+  .succes-container {
+    min-height: unset;
+    padding: 50px 65px 65px;
+    border-radius: var(--radius-600);
+}
+
+  .succes-container .button-wrap {
+  margin-top: 42px;
+}
+
+.succes-container img.icon {
+  margin-bottom: 42px;
+}
+}
+
+@media screen and (min-width: 930px) {
+  
+
+  .subscribe-container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding: 24px;
+  border-radius: var(--radius-600);
+  overflow: hidden;
+}
+
+.subscribe-container .image-col {
+  flex: 0 0 400px;
+}
+
+  .subscribe-container .content-col {
+  padding: 0 64px 0 40px;
+}
+
+  h1.title {
+  font-size: 55px;
+}
+}

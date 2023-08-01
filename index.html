@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+</head>
+<body>
+
+  <section class="join-us-wrapper">
+    <div class="subscribe-container">
+      <div class="image-col">
+        <picture>
+          <source srcset="./assets/images/illustration-sign-up-desktop.svg" media="(min-width: 930px)" />
+          <img src="./assets/images/illustration-sign-up-mobile.svg" alt="MDN" />
+        </picture>
+      </div>
+
+      <div class="content-col">
+        <h1 class="title">Stay updated!</h1>
+
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+
+        <ul class="icon-list">
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+
+        <form action="" class="email-form" >
+          <label for="email-input">Email address</label>
+
+          <div class="input-wrap">
+            <input id="email-input" type="text" placeholder="email@company.com">
+          </div>
+
+          <div class="button-wrap">
+            <input type="button" id="email-submit" value="Subscribe to monthly newsletter">
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="succes-container">
+      <img src="./assets/images/icon-success.svg" alt="" class="icon">
+
+      <h1 class="title">Thanks for subscribing!</h1>
+
+      <p>A confirmation email has been sent to <span id="target-email">ash@loremcompany.com</span>. 
+        Please open it and click the button inside to confirm your subscription.
+      </p>
+
+      <div class="button-wrap">
+        <input type="button" id="message-submit" value="Dismiss message">
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
