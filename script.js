@@ -6,13 +6,12 @@ const succesEmailContainer = document.querySelector('.succes-container #target-e
 let succesEmail = ''
 const messageSubmit = document.querySelector('.succes-container #message-submit')
 
-succesContainer.style.display = 'none'
 
 const mailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
 function resetEmailForm (){
-  succesContainer.style.display = 'none'
-  subscribeContainer.style.display = 'flex'
+  succesContainer.classList.remove('visible')
+  subscribeContainer.classList.add('visible')
   emailInput.value = ''
 
   if ( emailInput.classList.contains('invalid') ){
@@ -45,8 +44,8 @@ function validateForm (){
 
   succesEmail = inputValue
   succesEmailContainer.textContent = succesEmail
-  subscribeContainer.style.display = 'none'
-  succesContainer.style.display = 'flex'
+  subscribeContainer.classList.remove('visible')
+  succesContainer.classList.add('visible')
 
   messageSubmit.addEventListener('click', resetEmailForm)
 }

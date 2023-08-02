@@ -75,11 +75,24 @@ ul.icon-list li::before {
 .subscribe-container, 
 .succes-container {
   background-color: white;
+  display: none;
+}
+
+.succes-container.visible{
+  display: flex;
+}
+
+.subscribe-container.visible{
+  display: block;
 }
 
 .subscribe-container {
   max-width: 930px;
   margin: 0 auto;
+}
+
+.subscribe-container .image-col picture {
+  display: flex;
 }
 
 .subscribe-container .content-col {
@@ -181,7 +194,6 @@ form label {
 .succes-container {
   padding: 150px 24px 45px;
   min-height: 100vh;
-  display: flex;
   flex-direction: column;
   max-width: 505px;
 }
@@ -204,13 +216,13 @@ span#target-email {
 /*---------Breapoints---------*/
 
 @media screen and (min-width: 500px) {
-  .succes-container {
+.succes-container {
     min-height: unset;
     padding: 50px 65px 65px;
     border-radius: var(--radius-600);
 }
 
-  .succes-container .button-wrap {
+.succes-container .button-wrap {
   margin-top: 42px;
 }
 
@@ -222,8 +234,7 @@ span#target-email {
 @media screen and (min-width: 930px) {
   
 
-  .subscribe-container {
-  display: flex;
+.subscribe-container {
   flex-direction: row-reverse;
   align-items: center;
   padding: 24px;
@@ -231,15 +242,19 @@ span#target-email {
   overflow: hidden;
 }
 
+.subscribe-container.visible {
+  display: flex;
+}
+
 .subscribe-container .image-col {
   flex: 0 0 400px;
 }
 
-  .subscribe-container .content-col {
+.subscribe-container .content-col {
   padding: 0 64px 0 40px;
 }
 
-  h1.title {
+h1.title {
   font-size: 55px;
 }
 }

@@ -12,7 +12,7 @@
 <body>
 
   <section class="join-us-wrapper">
-    <div class="subscribe-container">
+    <div class="subscribe-container visible">
       <div class="image-col">
         <picture>
           <source srcset="./assets/images/illustration-sign-up-desktop.svg" media="(min-width: 930px)" />
@@ -31,7 +31,7 @@
           <li>And much more!</li>
         </ul>
 
-        <form action="" class="email-form" >
+        <form action="" class="email-form" onkeydown="return event.key != 'Enter';">
           <label for="email-input">Email address</label>
 
           <div class="input-wrap">
